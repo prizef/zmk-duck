@@ -54,11 +54,11 @@
         
         default_layer {
             bindings = <
-                &none             &ht TILDE GRAVE  &kp SLASH      &kp ASTERISK    &kp MINUS
-                &none             &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9    &kp PLUS
-                &none             &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6    &kp PLUS
-                &kp C_MUTE        &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3    &kp ENTER
-                &kp C_PLAY_PAUSE  &kp NUMBER_0     &kp NUMBER_0   &kp DOT         &kp ENTER
+                &none       &ht TILDE GRAVE  &kp SLASH      &kp ASTERISK    &kp MINUS
+                &none       &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9    &kp PLUS
+                &none       &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6    &kp PLUS
+                &none       &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3    &kp ENTER
+                &kp C_MUTE  &kp NUMBER_0     &kp NUMBER_0   &kp DOT         &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
