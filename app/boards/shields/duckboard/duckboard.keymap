@@ -1,7 +1,7 @@
-/* Copyright (c) 2020 The ZMK Contributors
+/* Copyright (c) 2022 The ZMK Contributors
  * SPDX-License-Identifier: MIT
  *
- * Author: Jack Hartstein
+ * Author: prizef
  */
 
 #include <behaviors.dtsi>
@@ -13,7 +13,6 @@
 
 #define DEFAULT 0
 #define FUNC 1
-
 #define TIMEOUT 200
 
 / {
@@ -29,7 +28,6 @@
             key-positions = <1 3>;
             bindings = <&reset>;
         };
-
         combo_layer0 {
             timeout-ms = <TIMEOUT>;
             key-positions = <1 16>;
@@ -41,16 +39,26 @@
             bindings = <&to FUNC>;
         };  
     };
+    behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold Tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         
         default_layer {
             bindings = <
-                &none             &kp TILDE      &kp SLASH      &kp ASTERISK    &kp MINUS
-                &none             &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9    &kp PLUS
-                &none             &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6    &kp PLUS
-                &kp K_MUTE        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3    &kp ENTER
-                &kp K_PLAY_PAUSE  &kp NUMBER_0   &kp NUMBER_0   &kp DOT         &kp ENTER
+                &none             &ht GRAVE TILDE  &kp SLASH      &kp ASTERISK    &kp MINUS
+                &none             &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9    &kp PLUS
+                &none             &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6    &kp PLUS
+                &kp C_MUTE        &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3    &kp ENTER
+                &kp C_PLAY_PAUSE  &kp NUMBER_0     &kp NUMBER_0   &kp DOT         &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
