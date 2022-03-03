@@ -44,7 +44,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "Hold Tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <TIMEOUT>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -54,7 +54,7 @@
         
         default_layer {
             bindings = <
-                &none             &ht GRAVE TILDE  &kp SLASH      &kp ASTERISK    &kp MINUS
+                &none             &ht TILDE GRAVE  &kp SLASH      &kp ASTERISK    &kp MINUS
                 &none             &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9    &kp PLUS
                 &none             &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6    &kp PLUS
                 &kp C_MUTE        &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3    &kp ENTER
