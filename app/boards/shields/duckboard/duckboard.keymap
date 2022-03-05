@@ -66,11 +66,11 @@
 
          func_layer {
              bindings = <
-                &none              &to DEFAULT      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none
-                &none              &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none
-                &none              &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none
-                &ext_power EP_TOG  &bt BT_CLR       &bt BT_NXT       &bt BT_PRV       &none
-                &none              &none            &none            &none            &none
+                &none   &to DEFAULT      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none
+                &none   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none
+                &none   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none
+                &none   &bt BT_CLR       &bt BT_NXT       &bt BT_PRV       &none
+                &none   &none            &none            &none            &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
